@@ -10,10 +10,10 @@ const app = express();
 // config to define app settings
 // use environment variables [ process.env ] for sensitive data like api keys and secrets
 var config = {
-   client_id: '3a2057fdeee2714f6970',
-   client_secret: '249f303a3cda5ba4342b1a3b8be8497d73fd48d3',
+   client_id: process.env.github_client_id,
+   client_secret: process.env.github_client_secret,
    redirect_url: 'http://localhost:3000/github/callback',
-   authorize_url:'https://github.com/login/oauth/authorize',
+   authorize_url:'https://github.com/login/oauth/authorize?scope=user:email&client_id=3a2057fdeee2714f6970',
    token_url: 'https://github.com/login/oauth/access_token',
    user_url: 'https://api.github.com/user',
    scope: 'user'
@@ -32,6 +32,7 @@ app.get('/github/auth', function(req,res){
 app.get('/github/callback', function(req,res){
    // extract authorize code 
    var code = req.query.code
+   console.log(code)
 
    // configure request params
    options = {

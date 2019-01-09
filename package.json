@@ -6,7 +6,8 @@
   "dependencies": {
     "express": "^4.16.4",
     "nodemon": "^1.18.9",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "start":"node index.js"
   },
   "devDependencies": {},
   "scripts": {
