@@ -13,7 +13,7 @@ var config = {
    client_id: process.env.github_client_id,
    client_secret: process.env.github_client_secret,
    redirect_url: 'http://localhost:3000/github/callback',
-   authorize_url:'https://github.com/login/oauth/authorize?scope=user:email&client_id=3a2057fdeee2714f6970',
+   authorize_url:'https://github.com/login/oauth/authorize?scope=user:email&client_id=XXXXXXXX',
    token_url: 'https://github.com/login/oauth/access_token',
    user_url: 'https://api.github.com/user',
    scope: 'user'
